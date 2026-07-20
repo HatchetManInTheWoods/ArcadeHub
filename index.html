@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Game System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ARCADE SYSTEM</h1>
+    <div class="subtitle">Select a game system and start playing.</div>
+    <div class="arcade-menu">
+        <button class="arcade-btn" onclick="startSnake()">Snake Game</button>
+        <button class="arcade-btn" onclick="startTetris()">Tetris System</button>
+        <button class="arcade-btn" onclick="startPlayerPong()">Player vs AI Pong</button>
+        <button class="arcade-btn" onclick="startAiPong()">AI vs AI Pong</button>
+        <button class="arcade-btn" onclick="startFlappy()">Flappy Pillars</button>
+        <button class="arcade-btn" onclick="startAsteroids()">Asteroids Combat</button>
+        <button class="arcade-btn" onclick="startBrickBreaker()">Brick Breaker</button>
+        <button class="arcade-btn" onclick="startFrogger()">Frogger</button>
+        <button class="arcade-btn" onclick="startSpaceInvaders()">Space Invaders</button>
+        <button class="arcade-btn" onclick="startPacMan()">Pac-Man</button>
+        <button class="arcade-btn" onclick="startMinesweeper()">Minesweeper</button>
+    </div>
+    <div id="cabinet-snake" class="game-cabinet">
+        <div class="score-container"><div class="score-board">Score: <span id="snake-score">0</span></div></div>
+        <canvas id="snakeCanvas" width="400" height="400"></canvas>
+        <div class="controls-hint">Controls: WASD Keys</div>
+    </div>
+    <div id="cabinet-tetris" class="game-cabinet">
+        <div class="score-container"><div class="score-board">Score: <span id="tetris-score">0</span></div></div>
+        <canvas id="tetrisCanvas" width="240" height="400"></canvas>
+        <div class="controls-hint">Controls: A/D (Move), W (Rotate), S (Drop)</div>
+    </div>
+    <div id="cabinet-pong" class="game-cabinet">
+        <div class="score-container"><div class="score-board">Score: <span id="pong-score">0</span></div></div>
+        <canvas id="pongCanvas" width="600" height="400"></canvas>
+        <div class="controls-hint">Controls: W/S (Move Right Paddle) | Left Paddle is Automated AI</div>
+    </div>
+    <div id="cabinet-flappy" class="game-cabinet">
+        <div class="score-container"><div class="score-board">Score: <span id="flappy-score">0</span></div></div>
+        <canvas id="flappyCanvas" width="480" height="400"></canvas>
+        <div class="controls-hint">Controls: Spacebar (Flap upward)</div>
+    </div>
+    <div id="cabinet-asteroids" class="game-cabinet">
+        <div class="score-container"><div class="score-board">Score: <span id="asteroids-score">0</span></div></div>
+        <canvas id="asteroidsCanvas" width="500" height="500"></canvas>
+        <div class="controls-hint">Controls: A/D (Rotate Triangle), Spacebar (Shoot)</div>
+    </div>
+    <div id="cabinet-brickbreaker" class="game-cabinet">
+        <div class="score-container"><div class="score-board">Score: <span id="brickbreaker-score">0</span></div></div>
+        <canvas id="brickbreakerCanvas" width="480" height="400"></canvas>
+        <div class="controls-hint">Controls: Left/Right Arrow Keys or A/D Keys</div>
+    </div>
+    <div id="cabinet-frogger" class="game-cabinet">
+        <div class="score-container"><div class="score-board">Lives: <span id="frogger-lives">3</span></div></div>
+        <canvas id="froggerCanvas" width="440" height="440"></canvas>
+        <div class="controls-hint">Controls: WASD Keys or Arrow Keys</div>
+    </div>
+    <div id="cabinet-spaceinvaders" class="game-cabinet">
+        <div class="score-container"><div class="score-board">Score: <span id="spaceinvaders-score">0</span></div></div>
+        <canvas id="spaceinvadersCanvas" width="480" height="400"></canvas>
+        <div class="controls-hint">Controls: A/D Keys (Move), Spacebar (Shoot)</div>
+    </div>
+    <div id="cabinet-pacman" class="game-cabinet">
+        <div class="score-container"><div class="score-board">Score: <span id="pacman-score">0</span></div></div>
+        <canvas id="pacmanCanvas" width="440" height="440"></canvas>
+        <div class="controls-hint">Controls: WASD Keys or Arrow Keys</div>
+    </div>
+    <div id="cabinet-minesweeper" class="game-cabinet">
+        <div class="score-container"><div class="score-board">Mines: <span id="minesweeper-count">10</span></div></div>
+        <canvas id="minesweeperCanvas" width="400" height="400"></canvas>
+        <div class="controls-hint">Controls: Left Click (Reveal), Right Click (Flag)</div>
+    </div>
+    <script src="script.js"></script>
+    <script src="snake.js"></script>
+    <script src="tetris.js"></script>
+    <script src="pong.js"></script>
+    <script src="flappy.js"></script>
+    <script src="asteroids.js"></script>
+    <script src="brickbreaker.js"></script>
+    <script src="frogger.js"></script>
+    <script src="spaceinvaders.js"></script>
+    <script src="pacman.js"></script>
+    <script src="minesweeper.js"></script>
+</body>
+</html>
